@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Gys65ic6c0yvt5PyQVxJDw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvElementArea="990, 512, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 514, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='telephone' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Telephone' /&gt;" Guid="bba42a1e-e850-4d6b-b7cf-b2c71cfe786a" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 521, 76, 18" CvTextArgument="Telephone" CvType="Text" DesignTimeRectangle="823, 510, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Telephone' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Telephone' check:innerText='Telephone' /&gt;" Guid="198fe167-ab82-416a-95e6-6cc0ea52bd67" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="6" Y="6" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="032b504d7e2216c688e9ce7e59e49605.png" xmlns="">0RgkhYh1a1E2Sra-Yi1Yf8w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

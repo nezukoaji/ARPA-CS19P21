@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kkrElEEIDkeB97cWhda2Vw" Reference="MhsMRf2FQUCo3DyhYLHxIw/vdGqP_WPb0GWTW_PNNDXrg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="6ea79aec-0f3c-4cf6-aaa2-e2eb2d29399d" CvElementArea="993, 366, 72, 30" CvType="InputBox" DesignTimeRectangle="994, 367, 70, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='adults' matching:id='fuzzy' fuzzylevel:id='0.0' tag='SELECT' class='passangers' matching:class='fuzzy' fuzzylevel:class='0.0' parentclass='passangers' rowName='Adults' visibleinnertext='0&amp;#xA;1&amp;#xA;2&amp;#xA;3&amp;#xA;4&amp;#xA;5&amp;#xA;6&amp;#xA;7&amp;#xA;8&amp;#xA;9&amp;#xA;10' /&gt;" Guid="e055c8e0-7a5f-44e1-a459-3b73a64e3cf3" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6ea79aec-0f3c-4cf6-aaa2-e2eb2d29399d" CvTextArea="822, 373, 49, 15" CvTextArgument="Adults" CvType="Text" DesignTimeRectangle="823, 362, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Adults' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Adults' rowName='Adults' visibleinnertext='Adults' check:innerText='Adults' /&gt;" Guid="47f610a5-fcaf-43dd-9c6b-6112acaf9ead" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="cf54fa5e4003e8c9d2dfeac2ed71407f.png" xmlns="">0v9l7gtcirEiSwsuYXqNnqQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

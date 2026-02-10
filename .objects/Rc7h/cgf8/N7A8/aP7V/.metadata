@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Create Quote",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "aP7VGbP3QUmqeFYugbxMdg",
+  "Reference": "MhsMRf2FQUCo3DyhYLHxIw/aP7VGbP3QUmqeFYugbxMdg",
+  "ParentRef": "MhsMRf2FQUCo3DyhYLHxIw/N7A8W4o_ZUeN9IM1426FKA",
+  "Created": "2026-02-10T06:52:46.0770239Z",
+  "Updated": "2026-02-10T06:52:46.0770239Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

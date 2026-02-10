@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="a_n8Ox8LA0unhawjTaxfOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c153152-9a79-486a-9ae1-b82054f8cf8d" CvElementArea="992, 218, 290, 30" CvType="InputBox" DesignTimeRectangle="993, 219, 288, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='to' matching:id='fuzzy' fuzzylevel:id='0.0' tag='SELECT' class='airport' matching:class='fuzzy' fuzzylevel:class='0.0' visibleinnertext='Albania - Tirana (TIA)&amp;#xA;Andorra - Andorra (ALV)&amp;#xA;Austria - Graz (GRZ)&amp;#xA;Austria - Innsbruck (INN)&amp;#xA;Austria - Salzburg (SZG)&amp;#xA;Austria - Vienna (VIE)&amp;#xA;Belarus - Minsk (MSQ)&amp;#xA;Belgium - Antwerp (ANR)&amp;#xA;Belgium - Brussels (BRU)&amp;#xA;Belgium - Ghent (GNE)&amp;#xA;Belgium - Liege (LGG)&amp;#xA;Bulgaria - Sofia (SOF)&amp;#xA;Bulgaria - Varna (VAR)&amp;#xA;Bulgaria - Vidin (VID)&amp;#xA;Czech Republic - Prague (PRG)&amp;#xA;Denmark - Aarhus (AAR)&amp;#xA;Denmark - Copenhagen (CPH)&amp;#xA;Denmark - Esbjerg (EBJ)&amp;#xA;Estonia - Tallinn (QUF)&amp;#xA;Estonia - Tallinn (TLL)&amp;#xA;Finland - Helsinki (HEL)&amp;#xA;France - *' /&gt;" Guid="a02aa548-6eae-4cf3-bcf5-65bd303383cc" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8c153152-9a79-486a-9ae1-b82054f8cf8d" CvTextArea="822, 226, 19, 14" CvTextArgument="To" CvType="Text" DesignTimeRectangle="823, 214, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='To' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='To' check:innerText='To' /&gt;" Guid="ed74c9e7-a331-430f-af79-18d69172af1c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6fcfb2163f9f21a074c22c67549f8762.png" xmlns="">0d1Nd9-YGXEGpn-I1grHIfA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

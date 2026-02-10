@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2cLFSdEOQ02cgCwMsZPmZQ" Reference="MhsMRf2FQUCo3DyhYLHxIw/UO6CC4-7DEGxR4iSQmDqLg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/login.html" CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvElementArea="990, 184, 291, 31" CvType="InputBox" DesignTimeRectangle="992, 185, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' tag='INPUT' /&gt;" Guid="528411c6-11ef-4a32-8393-676780fed86c" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvTextArea="823, 193, 83, 14" CvTextArgument="User Name" CvType="Text" DesignTimeRectangle="823, 177, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' aaname='User Name' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='User Name' /&gt;" Guid="7bdea5c1-3250-4cf4-bf8d-4bfcbafe53be" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="BottomLeft" X="57" Y="-4" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="6d024d8960be635b12426577b8607957.png" xmlns="">0c78vV99_a0uRMrhs_9j61g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

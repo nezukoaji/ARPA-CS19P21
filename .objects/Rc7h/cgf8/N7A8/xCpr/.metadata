@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Adults",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "xCprX2kz00SWnuI4HUXekA",
+  "Reference": "MhsMRf2FQUCo3DyhYLHxIw/xCprX2kz00SWnuI4HUXekA",
+  "ParentRef": "MhsMRf2FQUCo3DyhYLHxIw/N7A8W4o_ZUeN9IM1426FKA",
+  "Created": "2026-02-10T09:36:15.9695442Z",
+  "Updated": "2026-02-10T09:36:15.9695442Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

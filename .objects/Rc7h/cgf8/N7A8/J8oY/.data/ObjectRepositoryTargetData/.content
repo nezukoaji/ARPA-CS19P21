@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Wz0pt9PIQkmGlXGoZ9SU7Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvElementArea="990, 476, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 477, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='postcode' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' rowName='Postcode' /&gt;" Guid="b95be9ac-53cc-4645-be29-62460ff8a409" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 484, 67, 15" CvTextArgument="Postcode" CvType="Text" DesignTimeRectangle="823, 473, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Postcode' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Postcode' check:innerText='Postcode' /&gt;" Guid="550b0516-f623-4faf-8141-49f5885fd3f9" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="dc6bb395de58d222c4ffc5f3d4fdb3f6.png" xmlns="">0llRBe3rSJ0GvqqyMCvF25Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

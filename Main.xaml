@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,10 +25,35 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -58,10 +83,13 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
@@ -77,51 +105,674 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1547,592.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1139,5908" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="468,533" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="812,5885" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:Int32" Name="ip1" />
-        <Variable x:TypeArguments="x:Int32" Name="ip2" />
-        <Variable x:TypeArguments="x:Int32" Name="output" />
+        <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="List_mailOutput" />
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="index" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:Int32">[ip1]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:Int32">10</InArgument>
-        </Assign.Value>
-      </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:Int32">[ip2]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:Int32">20</InArgument>
-        </Assign.Value>
-      </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:Int32">[output]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:Int32">[ip1+ip2]</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[output]" />
+      <ui:GetOutlookMailMessages FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="ajitha.baskaran@qbotica.com" sap2010:Annotation.AnnotationText="Fetch Email Which has &quot;Travel Quote Request as Subject" ConnectionMode="LegacyConfiguration" DisplayName="Get Outlook Desktop Mail Messages" Filter="[Subject] = 'Travel Quote Request'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="778,168" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[List_mailOutput]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="5" UseISConnection="False">
+        <ui:GetOutlookMailMessages.ConnectionDetailsBackupSlot>
+          <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </ui:GetOutlookMailMessages.ConnectionDetailsBackupSlot>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:GetOutlookMailMessages>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="778,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extracted E-Mail&quot;]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="778,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="486,647" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[index]" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="452,587" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[List_mailOutput]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="snm:MailMessage">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,465" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SaveMailAttachments Attachments="{x:Null}" ResourceAttachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter=".xlsx" FolderPath="C:\Users\AjithaBaskaran\Documents\UiPath\Task2\Attachments_Mail" sap:VirtualizedContainerService.HintSize="416,231" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[currentMailMessage]" OverwriteExisting="False" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Saved the Attachments&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\AjithaBaskaran\Documents\UiPath\Task2\Attachments_Mail" sap:VirtualizedContainerService.HintSize="778,5371" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="744,5084" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="710,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Iterating files&quot;]" />
+              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="710,4849" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
+                <ueab:ExcelProcessScopeX.Body>
+                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="676,4739" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="642,4675" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" TemplatePath="Attachments_Mail\BP_Travel_Quote_Exercise.xlsx" WorkbookPath="[CurrentFile.FullName]">
+                        <ueab:ExcelApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,4375" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="sd2:DataTable" Name="DT_TravelAttachment" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="574,207" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Travel_Quote_Input&quot;)]" SaveTo="[DT_TravelAttachment]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574,179" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Extracted the Datas&quot;]" />
+                              <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="574,3925" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Travel_Quote_Input&quot;)]" SaveAfterEachRow="False">
+                                <ueab:ExcelForEachRowX.Body>
+                                  <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                    <ActivityAction.Argument1>
+                                      <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                    </ActivityAction.Argument1>
+                                    <ActivityAction.Argument2>
+                                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                    </ActivityAction.Argument2>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,3705" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge BP Travel - Search" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="506,3641" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V2">
+                                        <uix:NApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,3443" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentIndex" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Name&quot;)]" Version="V5">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/login.html" CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" ContentHash="2cLFSdEOQ02cgCwMsZPmZQ" CvElementArea="990, 184, 291, 31" CvType="InputBox" DesignTimeRectangle="992, 185, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' tag='INPUT' /&gt;" Guid="528411c6-11ef-4a32-8393-676780fed86c" InformativeScreenshot="6d024d8960be635b12426577b8607957.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/UO6CC4-7DEGxR4iSQmDqLg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvTextArea="823, 193, 83, 14" CvTextArgument="User Name" CvType="Text" DesignTimeRectangle="823, 177, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' aaname='User Name' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='User Name' /&gt;" Guid="7bdea5c1-3250-4cf4-bf8d-4bfcbafe53be" SearchSteps="FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                    <uix:TargetAnchorable.PointOffset>
+                                                      <uix:PointOffset Position="BottomLeft" X="57" Y="-4" />
+                                                    </uix:TargetAnchorable.PointOffset>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                              </uix:NTypeInto>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Name&quot;)]" Version="V5">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/login.html" CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" ContentHash="NtwalBi5gU2wsfH91rFEnw" DesignTimeRectangle="992, 230, 289, 29" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' tag='INPUT' /&gt;" Guid="b9cd135f-b6a0-4e6f-a74a-cbf41e4ee86b" InformativeScreenshot="9197c6930a8caa86089d8e3b42514461.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/Kgh_Jv-0fEaZpSizZjt4VA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvTextArea="823, 237, 70, 15" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="823, 222, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Password' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Password' /&gt;" Guid="57f238d6-5feb-4a72-be55-957b366bdd90" SearchSteps="FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                              </uix:NTypeInto>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470,198" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/login.html" CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" ContentHash="KzDcqaZ8zUSCEujOcXl8_g" CvElementArea="1127, 272, 157, 35" CvTextArea="1181, 282, 48, 17" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1129, 274, 152, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' aaname='Log In' innertext='Log In' /&gt;" Guid="575e112d-64c9-429b-826a-3c7a9342a9e7" InformativeScreenshot="2e812c83f4972780c808211eb7377769.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/Dm9KOrzWcUSlLIwEy-IsPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <uix:Target CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvTextArea="823, 237, 70, 15" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="823, 222, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Password' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Password' /&gt;" Guid="05550c39-a33b-4fdd-a71e-d27c4e4bc374" SearchSteps="FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NCheckState DisplayName="Check App State 'Quote Reference'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="470,2681" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                <uix:NCheckState.IfExists>
+                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,2367" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:String" Name="Str_QuoteReference" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create Quote'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/search.html" CVScreenId="ed3890eb-43f2-4ee6-a8e8-e10791c3246a" ContentHash="Vj8-tfuqBUqc1lHZjudjlg" DesignTimeRectangle="653, 222, 98, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='A' aaname='Create Quote' innertext='Create Quote' parentid='navigation' /&gt;" Guid="7595dc81-642b-402f-aebd-2976f0108dc2" InformativeScreenshot="1a34537a0955fe1a73bad0f97f350e22.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/aP7VGbP3QUmqeFYugbxMdg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Search' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="ed3890eb-43f2-4ee6-a8e8-e10791c3246a" CvTextArea="824, 237, 138, 18" CvTextArgument="Booking Reference" CvType="Text" DesignTimeRectangle="823, 222, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Booking Reference' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Booking Reference' check:innerText='Booking Reference' /&gt;" Guid="c9ededf9-9229-43fa-8d46-a1a1ca0a7be3" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NClick>
+                                                    <uix:NSelectItem DisplayName="Select Item 'From'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,199" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[CurrentRow.ByField(&quot;From&quot;)]" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                      <uix:NSelectItem.Items>
+                                                        <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                          <x:String></x:String>
+                                                          <x:String>Albania - Tirana (TIA)</x:String>
+                                                          <x:String>Andorra - Andorra (ALV)</x:String>
+                                                          <x:String>Austria - Graz (GRZ)</x:String>
+                                                          <x:String>Austria - Innsbruck (INN)</x:String>
+                                                          <x:String>Austria - Salzburg (SZG)</x:String>
+                                                          <x:String>Austria - Vienna (VIE)</x:String>
+                                                          <x:String>Belarus - Minsk (MSQ)</x:String>
+                                                          <x:String>Belgium - Antwerp (ANR)</x:String>
+                                                          <x:String>Belgium - Brussels (BRU)</x:String>
+                                                          <x:String>Belgium - Ghent (GNE)</x:String>
+                                                          <x:String>Belgium - Liege (LGG)</x:String>
+                                                          <x:String>Bulgaria - Sofia (SOF)</x:String>
+                                                          <x:String>Bulgaria - Varna (VAR)</x:String>
+                                                          <x:String>Bulgaria - Vidin (VID)</x:String>
+                                                          <x:String>Czech Republic - Prague (PRG)</x:String>
+                                                          <x:String>Denmark - Aarhus (AAR)</x:String>
+                                                          <x:String>Denmark - Copenhagen (CPH)</x:String>
+                                                          <x:String>Denmark - Esbjerg (EBJ)</x:String>
+                                                          <x:String>Estonia - Tallinn (QUF)</x:String>
+                                                          <x:String>Estonia - Tallinn (TLL)</x:String>
+                                                          <x:String>Finland - Helsinki (HEL)</x:String>
+                                                          <x:String>France - Bordeaux (BOD)</x:String>
+                                                          <x:String>France - Grenoble (GNB)</x:String>
+                                                          <x:String>France - Lyon (LYN)</x:String>
+                                                          <x:String>France - Marseille (MRS)</x:String>
+                                                          <x:String>France - Nantes (NTE)</x:String>
+                                                          <x:String>France - Nice (NCE)</x:String>
+                                                          <x:String>France - Paris (CDG)</x:String>
+                                                          <x:String>France - Paris (ORY)</x:String>
+                                                          <x:String>France - Strassburg (SXB)</x:String>
+                                                          <x:String>Georgia - Tbilisi (TBS)</x:String>
+                                                          <x:String>Germany - Berlin (BER)</x:String>
+                                                          <x:String>Germany - Cologne (CGN)</x:String>
+                                                          <x:String>Germany - Dortmund (DTM)</x:String>
+                                                          <x:String>Germany - Duesseldorf (DUS)</x:String>
+                                                          <x:String>Germany - Frankfurt (FRA)</x:String>
+                                                          <x:String>Germany - Hamburg (HAM)</x:String>
+                                                          <x:String>Germany - Munich (MUC)</x:String>
+                                                          <x:String>Greece - Athens (HEW)</x:String>
+                                                          <x:String>Greece - Chania (CHQ)</x:String>
+                                                          <x:String>Greece - Corfu (CFU)</x:String>
+                                                          <x:String>Hungary - Budapest (BUD)</x:String>
+                                                          <x:String>Iceland - Reykjavik (KEF)</x:String>
+                                                          <x:String>Ireland - Cork (ORK)</x:String>
+                                                          <x:String>Ireland - Dublin (DUB)</x:String>
+                                                          <x:String>Ireland - Shannon (SNN)</x:String>
+                                                          <x:String>Italy - Bologna (BLQ)</x:String>
+                                                          <x:String>Italy - Brescia (VBS)</x:String>
+                                                          <x:String>Italy - Florence (FLR)</x:String>
+                                                        </scg:List>
+                                                      </uix:NSelectItem.Items>
+                                                      <uix:NSelectItem.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="4b6ed7e9-6083-475f-83ee-2ef5674f8c28" ContentHash="5JK0_3Sh6U6noCSPDSCP_Q" CvElementArea="991, 180, 290, 30" CvType="InputBox" DesignTimeRectangle="993, 182, 288, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='from' tag='SELECT' /&gt;" Guid="394db6d8-e7e5-4211-ae7b-7556fa0789d1" InformativeScreenshot="0R3rjgGgTyU2WB9zNSRAZUg" Reference="MhsMRf2FQUCo3DyhYLHxIw/IJ5jFBykiEeMROYMxHqHyQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="4b6ed7e9-6083-475f-83ee-2ef5674f8c28" DesignTimeRectangle="823, 177, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='From' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' tag='TD' check:innerText='From' /&gt;" Guid="3ac25022-8c32-4fef-a2cc-01e645961663" SearchSteps="FuzzySelector" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NSelectItem.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NSelectItem>
+                                                    <uix:NSelectItem DisplayName="Select Item 'To'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,199" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[CurrentRow.ByField(&quot;To&quot;)]" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                      <uix:NSelectItem.Items>
+                                                        <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                          <x:String></x:String>
+                                                          <x:String>Albania - Tirana (TIA)</x:String>
+                                                          <x:String>Andorra - Andorra (ALV)</x:String>
+                                                          <x:String>Austria - Graz (GRZ)</x:String>
+                                                          <x:String>Austria - Innsbruck (INN)</x:String>
+                                                          <x:String>Austria - Salzburg (SZG)</x:String>
+                                                          <x:String>Austria - Vienna (VIE)</x:String>
+                                                          <x:String>Belarus - Minsk (MSQ)</x:String>
+                                                          <x:String>Belgium - Antwerp (ANR)</x:String>
+                                                          <x:String>Belgium - Brussels (BRU)</x:String>
+                                                          <x:String>Belgium - Ghent (GNE)</x:String>
+                                                          <x:String>Belgium - Liege (LGG)</x:String>
+                                                          <x:String>Bulgaria - Sofia (SOF)</x:String>
+                                                          <x:String>Bulgaria - Varna (VAR)</x:String>
+                                                          <x:String>Bulgaria - Vidin (VID)</x:String>
+                                                          <x:String>Czech Republic - Prague (PRG)</x:String>
+                                                          <x:String>Denmark - Aarhus (AAR)</x:String>
+                                                          <x:String>Denmark - Copenhagen (CPH)</x:String>
+                                                          <x:String>Denmark - Esbjerg (EBJ)</x:String>
+                                                          <x:String>Estonia - Tallinn (QUF)</x:String>
+                                                          <x:String>Estonia - Tallinn (TLL)</x:String>
+                                                          <x:String>Finland - Helsinki (HEL)</x:String>
+                                                          <x:String>France - Bordeaux (BOD)</x:String>
+                                                          <x:String>France - Grenoble (GNB)</x:String>
+                                                          <x:String>France - Lyon (LYN)</x:String>
+                                                          <x:String>France - Marseille (MRS)</x:String>
+                                                          <x:String>France - Nantes (NTE)</x:String>
+                                                          <x:String>France - Nice (NCE)</x:String>
+                                                          <x:String>France - Paris (CDG)</x:String>
+                                                          <x:String>France - Paris (ORY)</x:String>
+                                                          <x:String>France - Strassburg (SXB)</x:String>
+                                                          <x:String>Georgia - Tbilisi (TBS)</x:String>
+                                                          <x:String>Germany - Berlin (BER)</x:String>
+                                                          <x:String>Germany - Cologne (CGN)</x:String>
+                                                          <x:String>Germany - Dortmund (DTM)</x:String>
+                                                          <x:String>Germany - Duesseldorf (DUS)</x:String>
+                                                          <x:String>Germany - Frankfurt (FRA)</x:String>
+                                                          <x:String>Germany - Hamburg (HAM)</x:String>
+                                                          <x:String>Germany - Munich (MUC)</x:String>
+                                                          <x:String>Greece - Athens (HEW)</x:String>
+                                                          <x:String>Greece - Chania (CHQ)</x:String>
+                                                          <x:String>Greece - Corfu (CFU)</x:String>
+                                                          <x:String>Hungary - Budapest (BUD)</x:String>
+                                                          <x:String>Iceland - Reykjavik (KEF)</x:String>
+                                                          <x:String>Ireland - Cork (ORK)</x:String>
+                                                          <x:String>Ireland - Dublin (DUB)</x:String>
+                                                          <x:String>Ireland - Shannon (SNN)</x:String>
+                                                          <x:String>Italy - Bologna (BLQ)</x:String>
+                                                          <x:String>Italy - Brescia (VBS)</x:String>
+                                                          <x:String>Italy - Florence (FLR)</x:String>
+                                                        </scg:List>
+                                                      </uix:NSelectItem.Items>
+                                                      <uix:NSelectItem.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c153152-9a79-486a-9ae1-b82054f8cf8d" ContentHash="a_n8Ox8LA0unhawjTaxfOQ" CvElementArea="992, 218, 290, 30" CvType="InputBox" DesignTimeRectangle="993, 219, 288, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='to' matching:id='fuzzy' fuzzylevel:id='0.0' tag='SELECT' class='airport' matching:class='fuzzy' fuzzylevel:class='0.0' visibleinnertext='Albania - Tirana (TIA)&amp;#xA;Andorra - Andorra (ALV)&amp;#xA;Austria - Graz (GRZ)&amp;#xA;Austria - Innsbruck (INN)&amp;#xA;Austria - Salzburg (SZG)&amp;#xA;Austria - Vienna (VIE)&amp;#xA;Belarus - Minsk (MSQ)&amp;#xA;Belgium - Antwerp (ANR)&amp;#xA;Belgium - Brussels (BRU)&amp;#xA;Belgium - Ghent (GNE)&amp;#xA;Belgium - Liege (LGG)&amp;#xA;Bulgaria - Sofia (SOF)&amp;#xA;Bulgaria - Varna (VAR)&amp;#xA;Bulgaria - Vidin (VID)&amp;#xA;Czech Republic - Prague (PRG)&amp;#xA;Denmark - Aarhus (AAR)&amp;#xA;Denmark - Copenhagen (CPH)&amp;#xA;Denmark - Esbjerg (EBJ)&amp;#xA;Estonia - Tallinn (QUF)&amp;#xA;Estonia - Tallinn (TLL)&amp;#xA;Finland - Helsinki (HEL)&amp;#xA;France - *' /&gt;" Guid="a02aa548-6eae-4cf3-bcf5-65bd303383cc" InformativeScreenshot="6fcfb2163f9f21a074c22c67549f8762.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/gW7fkdjYw0mx9I0vVIHz5A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="8c153152-9a79-486a-9ae1-b82054f8cf8d" CvTextArea="822, 226, 19, 14" CvTextArgument="To" CvType="Text" DesignTimeRectangle="823, 214, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='To' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='To' check:innerText='To' /&gt;" Guid="ed74c9e7-a331-430f-af79-18d69172af1c" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NSelectItem.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NSelectItem>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Departing'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Departing&quot;)]" Version="V5">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="25dcc7c4-8d8a-4d4a-a9ab-dfdba10848a0" ContentHash="Jkv9C_v3AEmGrqjmUWzFKQ" CvElementArea="990, 253, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 255, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='departing' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Departing' /&gt;" Guid="ac30216d-e235-4a5e-928b-1775c3d2df3c" InformativeScreenshot="4c48746955462ea6cb9ec96b0adab310.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/Qq1mukmGbEqRSMFm9WGFow" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="25dcc7c4-8d8a-4d4a-a9ab-dfdba10848a0" CvTextArea="824, 263, 72, 17" CvTextArgument="Departing" CvType="Text" DesignTimeRectangle="823, 251, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Departing' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Departing' check:innerText='Departing' /&gt;" Guid="89a39b03-4d05-4cf8-a2ec-b4f2b640bdb7" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Returning'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="Simulate" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Returning&quot;)]" Version="V5">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="dUBtCcLYn0KTBcoJhn7tyA" CvElementArea="990, 328, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 329, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='returning' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;input' rowName='Returning' /&gt;" Guid="85429ff0-196a-4644-aa80-c355e3d05221" InformativeScreenshot="90859bd9c3cf2fcb2aa0d7df9c5c630d.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/fmbYgfbxpEePxO9Q8itPww" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="824, 337, 72, 17" CvTextArgument="Returning" CvType="Text" DesignTimeRectangle="823, 325, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Returning' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Returning' check:innerText='Returning' /&gt;" Guid="b9ec1b58-609d-4c90-b376-c598c68a2573" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NSelectItem DisplayName="Select Item 'Adults'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,199" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="[CurrentRow.ByField(&quot;Adults&quot;)]" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                      <uix:NSelectItem.Items>
+                                                        <scg:List x:TypeArguments="x:String" Capacity="12">
+                                                          <x:String></x:String>
+                                                          <x:String>0</x:String>
+                                                          <x:String>1</x:String>
+                                                          <x:String>2</x:String>
+                                                          <x:String>3</x:String>
+                                                          <x:String>4</x:String>
+                                                          <x:String>5</x:String>
+                                                          <x:String>6</x:String>
+                                                          <x:String>7</x:String>
+                                                          <x:String>8</x:String>
+                                                          <x:String>9</x:String>
+                                                          <x:String>10</x:String>
+                                                        </scg:List>
+                                                      </uix:NSelectItem.Items>
+                                                      <uix:NSelectItem.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="6ea79aec-0f3c-4cf6-aaa2-e2eb2d29399d" ContentHash="kkrElEEIDkeB97cWhda2Vw" CvElementArea="993, 366, 72, 30" CvType="InputBox" DesignTimeRectangle="994, 367, 70, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='adults' matching:id='fuzzy' fuzzylevel:id='0.0' tag='SELECT' class='passangers' matching:class='fuzzy' fuzzylevel:class='0.0' parentclass='passangers' rowName='Adults' visibleinnertext='0&amp;#xA;1&amp;#xA;2&amp;#xA;3&amp;#xA;4&amp;#xA;5&amp;#xA;6&amp;#xA;7&amp;#xA;8&amp;#xA;9&amp;#xA;10' /&gt;" Guid="e055c8e0-7a5f-44e1-a459-3b73a64e3cf3" InformativeScreenshot="cf54fa5e4003e8c9d2dfeac2ed71407f.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/vdGqP_WPb0GWTW_PNNDXrg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="6ea79aec-0f3c-4cf6-aaa2-e2eb2d29399d" CvTextArea="822, 373, 49, 15" CvTextArgument="Adults" CvType="Text" DesignTimeRectangle="823, 362, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Adults' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Adults' rowName='Adults' visibleinnertext='Adults' check:innerText='Adults' /&gt;" Guid="47f610a5-fcaf-43dd-9c6b-6112acaf9ead" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NSelectItem.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NSelectItem>
+                                                    <uix:NSelectItem DisplayName="Select Item 'Children'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,199" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="[CurrentRow.ByField(&quot;Children&quot;)]" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                      <uix:NSelectItem.Items>
+                                                        <scg:List x:TypeArguments="x:String" Capacity="12">
+                                                          <x:String></x:String>
+                                                          <x:String>0</x:String>
+                                                          <x:String>1</x:String>
+                                                          <x:String>2</x:String>
+                                                          <x:String>3</x:String>
+                                                          <x:String>4</x:String>
+                                                          <x:String>5</x:String>
+                                                          <x:String>6</x:String>
+                                                          <x:String>7</x:String>
+                                                          <x:String>8</x:String>
+                                                          <x:String>9</x:String>
+                                                          <x:String>10</x:String>
+                                                        </scg:List>
+                                                      </uix:NSelectItem.Items>
+                                                      <uix:NSelectItem.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="h8GEZvd9l0O9ZZCILyA5pQ" CvElementArea="992, 402, 73, 31" CvType="InputBox" DesignTimeRectangle="994, 404, 70, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='children' matching:id='fuzzy' fuzzylevel:id='0.0' tag='SELECT' class='passangers' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Children' visibleinnertext='0&amp;#xA;1&amp;#xA;2&amp;#xA;3&amp;#xA;4&amp;#xA;5&amp;#xA;6&amp;#xA;7&amp;#xA;8&amp;#xA;9&amp;#xA;10' /&gt;" Guid="d11f091c-582c-49c7-b7a3-2e6f9c14130a" InformativeScreenshot="d081e0a4ed6d8f18229ca01e40d7ba03.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/xCprX2kz00SWnuI4HUXekA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 410, 62, 15" CvTextArgument="Children" CvType="Text" DesignTimeRectangle="823, 399, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Children' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Children' check:innerText='Children' /&gt;" Guid="a83ec15b-929f-4443-ba1f-1bc6be963d1b" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NSelectItem.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NSelectItem>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="Simulate" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Name&quot;)]" Version="V5">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="Y-PP4Hx1eUmPxhxf37U_GA" CvElementArea="991, 439, 291, 31" CvType="InputBox" DesignTimeRectangle="992, 440, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Name' /&gt;" Guid="e54a67b8-b778-4037-a39c-c319430d32c0" InformativeScreenshot="f7591436a24ef06163188bd0f1aa375e.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/AD0rqkqf2Eu_SHvUPN1-MA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 448, 44, 14" CvTextArgument="Name" CvType="Text" DesignTimeRectangle="823, 436, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Name' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Name' check:innerText='Name' /&gt;" Guid="425a520a-fdb7-471d-b4f7-d44f093c9e7c" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Postcode'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="Simulate" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Postcode&quot;)]" Version="V5">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="Wz0pt9PIQkmGlXGoZ9SU7Q" CvElementArea="990, 476, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 477, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='postcode' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' rowName='Postcode' /&gt;" Guid="b95be9ac-53cc-4645-be29-62460ff8a409" InformativeScreenshot="dc6bb395de58d222c4ffc5f3d4fdb3f6.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/J8oY0qm9rkC2p599OG0GHg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 484, 67, 15" CvTextArgument="Postcode" CvType="Text" DesignTimeRectangle="823, 473, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Postcode' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Postcode' check:innerText='Postcode' /&gt;" Guid="550b0516-f623-4faf-8141-49f5885fd3f9" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Telephone'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="WindowMessages" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Phone&quot;)]" Version="V5">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="Gys65ic6c0yvt5PyQVxJDw" CvElementArea="990, 512, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 514, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='telephone' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Telephone' /&gt;" Guid="bba42a1e-e850-4d6b-b7cf-b2c71cfe786a" InformativeScreenshot="032b504d7e2216c688e9ce7e59e49605.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/HDIe2ZKPk0mGzgALNJriqw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 521, 76, 18" CvTextArgument="Telephone" CvType="Text" DesignTimeRectangle="823, 510, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Telephone' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Telephone' check:innerText='Telephone' /&gt;" Guid="198fe167-ab82-416a-95e6-6cc0ea52bd67" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                          <uix:TargetAnchorable.PointOffset>
+                                                            <uix:PointOffset X="6" Y="6" />
+                                                          </uix:TargetAnchorable.PointOffset>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="Simulate" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Text="[CurrentRow.ByField(&quot;Email&quot;)]" Version="V5">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="Wv9ry-CDZk2mylJzlOMXdw" CvElementArea="991, 549, 291, 32" CvType="InputBox" DesignTimeRectangle="992, 551, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='email' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Email' /&gt;" Guid="19e5c6ef-1de8-4679-858c-e22515e51cfc" InformativeScreenshot="3a16f219a268937e02ebd8775bf7f360.png" IsResponsive="True" Reference="MhsMRf2FQUCo3DyhYLHxIw/MDj25-6IBUiIBmcCgNOn5w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="824, 558, 40, 15" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="823, 547, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Email' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Email' check:innerText='Email' /&gt;" Guid="ef2a8227-c9ae-422a-8114-d371430825b5" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create Quote(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" Version="V5">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" ContentHash="J9i8zZJXI0yOqGHmvcEJww" CvElementArea="1127, 586, 156, 35" CvTextArea="1155, 595, 100, 17" CvTextArgument="Create Quote" CvType="Button" DesignTimeRectangle="1129, 587, 152, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='12' tag='SPAN' aaname='Create Quote' class='button' onclick='createQuote()' /&gt;" Guid="77af67cf-1ed8-4781-852f-651fd83686ae" InformativeScreenshot="0c5621972414bd47bfeea81b86045c6d.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/AzRN3ZpcOkO3ryZ3bStbXA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="824, 558, 40, 15" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="823, 547, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Email' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Email' check:innerText='Email' /&gt;" Guid="b8fe1872-1246-4627-a237-c2bc124a0287" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NClick>
+                                                    <uix:NGetText DisplayName="Get Text 'Quote Reference'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="64d63dd6-8db9-4026-9439-b385e708a4f2" TextString="[Str_QuoteReference]" Version="V5">
+                                                      <uix:NGetText.Target>
+                                                        <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/viewquote.html" CVScreenId="6cb792e6-df32-4ee4-9d9c-ce98af713fdb" ContentHash="GPu8-THB30aFjk2TTnBJuQ" CvElementArea="993, 181, 289, 29" CvType="InputBox" DesignTimeRectangle="994, 182, 287, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='reference' matching:id='fuzzy' fuzzylevel:id='0.0' tag='DIV' class='label' matching:class='fuzzy' fuzzylevel:class='0.0' parentclass='right' rowName='Quote Reference' /&gt;" Guid="15f584c4-e681-447f-b5c9-5c5f5b4cfe15" InformativeScreenshot="05066b1727c7d01b13b3dc34f0c77ab4.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/ON60UYfor0qy2K2SFer3wQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - View Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target CVScreenId="6cb792e6-df32-4ee4-9d9c-ce98af713fdb" CvTextArea="823, 188, 124, 18" CvTextArgument="Quote Reference" CvType="Text" DesignTimeRectangle="823, 177, 154, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Quote Reference' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' colName='Quote Reference' innertext='Quote Reference' check:innerText='Quote Reference' /&gt;" Guid="68fc3bb8-a2b7-4cf5-aefe-4bf13f486663" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NGetText.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NGetText>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,179" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Data Updated and retrived the Quote Reference&quot;]" />
+                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[CurrentRow.ByField(&quot;Quote Reference&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,197" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[Str_QuoteReference]" />
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,170" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Sheets Updated&quot;]" />
+                                                  </Sequence>
+                                                </uix:NCheckState.IfExists>
+                                                <uix:NCheckState.IfNotExists>
+                                                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,25" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;Unable to open the site&quot;]" />
+                                                  </Sequence>
+                                                </uix:NCheckState.IfNotExists>
+                                                <uix:NCheckState.Target>
+                                                  <uix:TargetAnchorable BrowserURL="bptravel.blueprism.com/createquote.html" ContentHash="d07kOXmByEij6jtKwV77AQ" DesignTimeRectangle="20, 90, 1896, 608" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="7e6d97ef-3e83-4fb8-b52f-8f51fd318b73" InformativeScreenshot="caf9060141c1c7d3ca344762b6a9873c.png" Reference="MhsMRf2FQUCo3DyhYLHxIw/f5FPcJ1WSU-zuXuGJby2bw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                </uix:NCheckState.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NCheckState>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </uix:NApplicationCard.Body>
+                                        <uix:NApplicationCard.OCREngine>
+                                          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                            <ActivityFunc.Argument>
+                                              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                            </ActivityFunc.Argument>
+                                          </ActivityFunc>
+                                        </uix:NApplicationCard.OCREngine>
+                                        <uix:NApplicationCard.TargetApp>
+                                          <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" ContentHash="PjfEnyjfmEGhS2eo2uj-Ng" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh4SURBVFhHpdd7UFNnGgbwWBURCAQVtu0/OzudcXVFVEBATdWKLVvkIuEmWAoUtOttqsICIiqKiEQBoV4xut1O1d11lW4RvFTSQ0ggECABkhAIIF4QpXZTt1Pcdbt59j050QoBq+07804YhuT5fe/58p0D70XLi3kQM69mgJlb02+aU9OHObIeeMqMmCM3YI5Ci3n1Gmr1kE+jsptaskhd/WvrW39Z+TDfSnwY05BXzQNQOPVtsIDZsm7qLnjWdsBTrsWculYCNMOnQQn/phoINdfNS9oudy/TVgitH/Vy5cs8Evoy35t8mIfwrvkGXjWDFH6Hwm/Cs+YGZtewgA54yPSYLW+Dp6IVc+ub4KVUYUEzC7iGpW0VWK67iKCuM+qwXsmLT8SPeZTvywyZLeHMP+HFDGJezT0C3OVWT+EelnAO4FHbRgg1AVTwbqiHb5MMC1qqLYDAjnN413AGK3tPDMX158dYI8YuP+Y/Elo55jPfgQXQ+C2rn0fh7AQsq6fRz2KDLa2jn1lAK02hGfOUjfBVsRO4agWcRVh3GQsAAcyr+/PGRvgzj/MJAFo99fcU/i1N4AEB7lsAnjLu2nvIDJbVs8GzZO34nawVs2pZQAvtBRXtAxmE6itY1n4RgfrPCHAC0TcLQeFIGNhhTh5Mt90X/sx/hRRu9mP+bQHMZ/5F/ZCC2Wt/l177afUsoJNCtU+DR/ZseTMhGmgjfonFmgoEaM8juOsEIm4UIe52LpLuZ2HN16lD1tgfy495bKKm8EdWwHfwkpow84tbmFnRS92DGZe6CGCkcP2o4Wx7yFtoLyixsPkKAf6BgHYWUIaIXjFib+UhaSAVawY3YaMpRWKNtqxewoY/Wf30c31w230NLqnlEGRWwjXrCqZkVVFfwtSMcryaX4U3/t48BoD9KjLwbZRiUUsllmvPIMhQhugbuYi9mY3E/i1IubceGx7Em63xFsAQXX94fP4NBFnXwM+4BudsBi67FBDk1sM1rwFT8pSYmleHabkyTNstxbSdl/FqbhWmV2qGAWbLVZhbJ4e/6hIWt/wNAa2fYEVHCUI7xVjVtw0JdzYh+e5a/OF+PDY9iJRQ+A8xBMD0M/1wSL0Kp+214Oc0wnmvBi772yEQ6+B6UIcp1FMLdXArbIPbgRa47a+HW64UbtkVeOMCNw2P2hY6lBQEUGB+fRUWNV/EMs0pBHcUQ2TMQUxvBuJubMYH/Wvx4b14rB+MHuAtqn6kmXn+a0xOk8IhWwnH3Wrw83RwLjDARdwJQWEXXIuMmHLIiKnU00qoDxngXqyD+4EmuOfJ4LajEr+tUtKpKMdcuRReisvwbziPN5s+xTL1MQTr8hBu2I5o4xa835eCpNuJSOmPxYd3ReB5Vzz8H39nI+yzVXDY3QbHvA445XeCX2CE8wEjXA52Q1DUDdfiHkL0YGpJDyE68XppR/evSg0F7kXqdPd9CuVrBdfhwbCA6wSoxALlZ3hTdQpvNR9BiC4XIkMWAbZide9aJN5MRPKtKA4w4y+DmLS9Gfa72jA5Vw+HvE447qPe3zUcUcghBNl1+M2Wz0us2+dpuefVJk4vr4a3/AJ8FefgX/dnLFaVIaBJjOC2TIRqMxFp2Ij3ehKR0LfaAlhzJxw8t+Iu2GW3YlKOHva5Bkzea7AgHKwIpwKCiDmESzoDxyCx0pppUzM+ufrYW3aWAGexsP4kFisPYplKjCBNBkLb0yDSb0CsIQ7x3VFIuiFCys1Q8FwPGjFxpw52u/SYtNsA+z0cYvJIRKaCwgvgFFaabs2zKZ+/Xm33ln0Kv9ojWKQoxJIGMd5pzECgKg0hmnUIb09GlC4e7xkj8b4xBCl9gWbehGwtJhBg4q4O2OV0EKLDgrB/FrFXD8fQIgovAV90PNWaZ1PejCTfR3aKAIcJcABL6vYgoD6NABsQ0pIIUXsCYvTRNAUR4jt/j0RjQDdv/HYC7NATQm+LYC8Ji9hQBccQAoiOgR95ssCaZ1M+X5UMzK85goW1+6n34S1FKpYrUxHYuA4rGhMQpo6HSBOFWH0IYnXvIt4QIOS9sl2H8dm6URGTrAiHiKNwWnmYDQc/+nS3NW9YeUk/FnpLi+k0FcOfyYWwdieWyrciQLEegfUJHKBJBFFLKCI1QYjTBzKWN76SpTONhbBjJ5HVDIeQQlr9cfCjTrEAMz/qtM3DhXe1uNxbWghf6R4sZHZCyGzF0tqNCJAn4526BAQ1rEKoKhwidQgL4MLZGrdNxxACTxDjR04inQ6n0ENwiihjw6n/RJDTA9a3Dyvf6hy1nzTHvECaToBUAqwjwAd4Wx6HoPpwBDeEm8JUoZutf87VuG3aGELABkE9kb4Z9usq4RhWah0/hXMAdhrl1o+wKaF002Yh85FkCZPMBMhWM2/XrpIEyiPGfjYkxBCLGPcsIptD2KXVw3Hlx6MB4Bx5ctT98PKVqc0nBCw9AjExXUUTKIHT6AA4R5QNOYtODB/rc8p1RWGMa9DBUR5QM7Um3ggEB6EzIPww7YETFP50DzwLAAGojw+5hB8rd1l51OaZTxByKEYQXCwRBBeZCAACjDK5TK2Q2jwaYlLKF3AKP0qhEg4xOgAEAAGoj8Al7DAEoaXUJSAACEBdBAKYCTDGfqBLQY2RiPEZLXCMOEaXgb4J7FfxlwHyrWljVKZWYoOgtlt3jaZwhNuMkSziZwF+fA58bnGTMLOQZxH2SRe4S8GeCZESAlD4iwHMBPiJlY8sbk+YRiIsk6AAuilROBvMhTvTfWIMgIkAP+//Q0tx06BzgoVwiPHpLZicdBF8uj8400ScKZR95YKp6fcEGCLAS676eZXJnphahhCmJ6fmhKw22P2xge6WX8Lxo6/gmsr88Fpa9cPXU86PecseXjze/wGADjhbeB2rcwAAAABJRU5ErkJggg==" InformativeScreenshot="a32912b1342156e9ef025717d62bfd76.jpg" Reference="MhsMRf2FQUCo3DyhYLHxIw/N7A8W4o_ZUeN9IM1426FKA" Selector="&lt;html app='msedge.exe' title='BP Travel - Search' /&gt;" Url="https://bptravel.blueprism.com/" Version="V2">
+                                            <uix:TargetApp.Arguments>
+                                              <InArgument x:TypeArguments="x:String" />
+                                            </uix:TargetApp.Arguments>
+                                            <uix:TargetApp.WorkingDirectory>
+                                              <InArgument x:TypeArguments="x:String" />
+                                            </uix:TargetApp.WorkingDirectory>
+                                          </uix:TargetApp>
+                                        </uix:NApplicationCard.TargetApp>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NApplicationCard>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ueab:ExcelForEachRowX.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:ExcelForEachRowX>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelApplicationCard.Body>
+                      </ueab:ExcelApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelProcessScopeX.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelProcessScopeX>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachFileX>
     </Sequence>
   </Sequence>
 </Activity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Y-PP4Hx1eUmPxhxf37U_GA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvElementArea="991, 439, 291, 31" CvType="InputBox" DesignTimeRectangle="992, 440, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Name' /&gt;" Guid="e54a67b8-b778-4037-a39c-c319430d32c0" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8c45a902-1b11-42ef-b76b-c81c7118057f" CvTextArea="823, 448, 44, 14" CvTextArgument="Name" CvType="Text" DesignTimeRectangle="823, 436, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Name' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Name' check:innerText='Name' /&gt;" Guid="425a520a-fdb7-471d-b4f7-d44f093c9e7c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f7591436a24ef06163188bd0f1aa375e.png" xmlns="">0p7-aTULMC0yLV_jByZGTAw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

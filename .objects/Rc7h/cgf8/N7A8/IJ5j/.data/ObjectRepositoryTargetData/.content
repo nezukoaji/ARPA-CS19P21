@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YyJSCX3tjkqAU_pInHvCiQ" Reference="MhsMRf2FQUCo3DyhYLHxIw/IJ5jFBykiEeMROYMxHqHyQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="4b6ed7e9-6083-475f-83ee-2ef5674f8c28" CvElementArea="991, 180, 290, 30" CvType="InputBox" DesignTimeRectangle="993, 182, 288, 28" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='from' tag='SELECT' /&gt;" Guid="394db6d8-e7e5-4211-ae7b-7556fa0789d1" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="4b6ed7e9-6083-475f-83ee-2ef5674f8c28" DesignTimeRectangle="823, 177, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='From' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' tag='TD' check:innerText='From' /&gt;" Guid="3ac25022-8c32-4fef-a2cc-01e645961663" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0R3rjgGgTyU2WB9zNSRAZUg" xmlns="">0R3rjgGgTyU2WB9zNSRAZUg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GPu8-THB30aFjk2TTnBJuQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/viewquote.html" CVScreenId="6cb792e6-df32-4ee4-9d9c-ce98af713fdb" CvElementArea="993, 181, 289, 29" CvType="InputBox" DesignTimeRectangle="994, 182, 287, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='reference' matching:id='fuzzy' fuzzylevel:id='0.0' tag='DIV' class='label' matching:class='fuzzy' fuzzylevel:class='0.0' parentclass='right' rowName='Quote Reference' /&gt;" Guid="15f584c4-e681-447f-b5c9-5c5f5b4cfe15" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - View Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6cb792e6-df32-4ee4-9d9c-ce98af713fdb" CvTextArea="823, 188, 124, 18" CvTextArgument="Quote Reference" CvType="Text" DesignTimeRectangle="823, 177, 154, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Quote Reference' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' colName='Quote Reference' innertext='Quote Reference' check:innerText='Quote Reference' /&gt;" Guid="68fc3bb8-a2b7-4cf5-aefe-4bf13f486663" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="05066b1727c7d01b13b3dc34f0c77ab4.png" xmlns="">06EpIkIiFd0ijfjL4ZhLaTw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

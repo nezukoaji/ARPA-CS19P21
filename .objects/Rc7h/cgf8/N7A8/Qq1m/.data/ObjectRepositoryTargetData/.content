@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Jkv9C_v3AEmGrqjmUWzFKQ" Reference="MhsMRf2FQUCo3DyhYLHxIw/Qq1mukmGbEqRSMFm9WGFow" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/createquote.html" CVScreenId="25dcc7c4-8d8a-4d4a-a9ab-dfdba10848a0" CvElementArea="990, 253, 292, 32" CvType="InputBox" DesignTimeRectangle="992, 255, 289, 29" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='departing' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' class='text' matching:class='fuzzy' fuzzylevel:class='0.0' rowName='Departing' /&gt;" Guid="ac30216d-e235-4a5e-928b-1775c3d2df3c" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="25dcc7c4-8d8a-4d4a-a9ab-dfdba10848a0" CvTextArea="824, 263, 72, 17" CvTextArgument="Departing" CvType="Text" DesignTimeRectangle="823, 251, 151, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Departing' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Departing' check:innerText='Departing' /&gt;" Guid="89a39b03-4d05-4cf8-a2ec-b4f2b640bdb7" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4c48746955462ea6cb9ec96b0adab310.png" xmlns="">0W2ExKOn3kky462UtZCH6nA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KzDcqaZ8zUSCEujOcXl8_g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/login.html" CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvElementArea="1127, 272, 157, 35" CvTextArea="1181, 282, 48, 17" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1129, 274, 152, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' aaname='Log In' innertext='Log In' /&gt;" Guid="575e112d-64c9-429b-826a-3c7a9342a9e7" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f711ae06-f67b-4738-b2f4-71940162b178" CvTextArea="823, 237, 70, 15" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="823, 222, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Password' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Password' /&gt;" Guid="05550c39-a33b-4fdd-a71e-d27c4e4bc374" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2e812c83f4972780c808211eb7377769.png" xmlns="">0qinfe8juQkqaOrCWVRtJGg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

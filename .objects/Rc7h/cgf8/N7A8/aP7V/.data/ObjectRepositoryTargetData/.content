@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Vj8-tfuqBUqc1lHZjudjlg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/search.html" CVScreenId="ed3890eb-43f2-4ee6-a8e8-e10791c3246a" DesignTimeRectangle="653, 222, 98, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='A' aaname='Create Quote' innertext='Create Quote' parentid='navigation' /&gt;" Guid="7595dc81-642b-402f-aebd-2976f0108dc2" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Search' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ed3890eb-43f2-4ee6-a8e8-e10791c3246a" CvTextArea="824, 237, 138, 18" CvTextArgument="Booking Reference" CvType="Text" DesignTimeRectangle="823, 222, 152, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' class='left' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Booking Reference' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Booking Reference' check:innerText='Booking Reference' /&gt;" Guid="c9ededf9-9229-43fa-8d46-a1a1ca0a7be3" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1a34537a0955fe1a73bad0f97f350e22.png" xmlns="">0g8eXy5JOtkmYWhcLLl0hmw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OEGPh652QUq7vzP7_sOrsQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bptravel.blueprism.com/login.html" CVScreenId="87e1dbcb-f938-40f0-9c65-32d019d9ee1f" CvElementArea="1127, 272, 157, 35" CvTextArea="1181, 282, 48, 17" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1129, 274, 152, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' aaname='Log In' class='button' /&gt;" Guid="9228a07c-c748-415f-a33b-434f0e3bfbb9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="16cc721b36377f264f3879299a886f4a.png" xmlns="">0sP-9lu3m1ECabrSRW6Ej9g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
